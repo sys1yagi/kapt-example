@@ -1,6 +1,5 @@
 package com.sys1yagi.kaptexample.dagger2
 
-import android.app.Application
 import android.content.Context
 import com.sys1yagi.kaptexample.tools.EventBus
 import dagger.Module
@@ -8,16 +7,16 @@ import dagger.Provides
 import javax.inject.Singleton
 
 Module
-public class AppModule(val application: Application) {
+open public class AppModule(val context: Context) {
 
     Provides
     fun provideContext(): Context {
-        return application
+        return context
     }
 
     Singleton
     Provides
-    fun provideEventBus(): EventBus {
+    open fun provideEventBus(): EventBus {
         return EventBus()
     }
 }
