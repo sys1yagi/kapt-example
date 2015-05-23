@@ -14,6 +14,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito.mock
+import javax.inject.Inject
 import kotlin.properties.Delegates
 
 RunWith(javaClass<AndroidJUnit4>())
@@ -31,6 +32,7 @@ public class InjectTest {
     }
 
     var eventBus: EventBus by Delegates.notNull()
+    [Inject] set
 
     Before
     public fun before() {
