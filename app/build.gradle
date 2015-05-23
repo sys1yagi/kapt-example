@@ -25,11 +25,12 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.1.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile 'com.google.dagger:dagger:2.0'
     kapt 'com.google.dagger:dagger-compiler:2.0'
     provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.google.dagger:dagger:2.0'
+    compile project(path: ':backend', configuration: 'android-endpoints')
 }
 buildscript {
     ext.kotlin_version = '0.1-SNAPSHOT'
