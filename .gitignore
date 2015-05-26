@@ -34,5 +34,5 @@ proguard/
 /build
 /captures
 
-.iml
-.idea
+*.iml
+*.idea
